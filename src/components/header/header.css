@@ -17,7 +17,7 @@
 
 .nav__logo,
 .nav__toggle{
-    font-size: 2rem;
+    font-size: 1.7rem;
     color: var(--title-color);
     font-weight: var(--font-medium);
 }

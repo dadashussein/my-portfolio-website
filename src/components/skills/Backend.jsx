@@ -8,7 +8,7 @@ const Backend = () => {
       <div className="skills__box">
         <div className="skills__group">
           <div className="skills__data">
-          <i class='bx bxl-php' ></i>
+            <i class="bx bxl-php"></i>
 
             <div>
               <h3 className="skills__name">PHP</h3>
@@ -17,7 +17,7 @@ const Backend = () => {
           </div>
 
           <div className="skills__data">
-          <i class='bx bxl-nodejs' ></i>
+            <i class="bx bxl-nodejs"></i>
 
             <div>
               <h3 className="skills__name">Node JS</h3>
@@ -28,7 +28,7 @@ const Backend = () => {
 
         <div className="skills__group">
           <div className="skills__data">
-          <i class='bx bxl-python' ></i>
+            <i class="bx bxl-python"></i>
 
             <div>
               <h3 className="skills__name">Python</h3>
@@ -37,7 +37,7 @@ const Backend = () => {
           </div>
 
           <div className="skills__data">
-          <i class='bx bxs-data' ></i>
+            <i class="bx bxs-data"></i>
 
             <div>
               <h3 className="skills__name">My SQL</h3>

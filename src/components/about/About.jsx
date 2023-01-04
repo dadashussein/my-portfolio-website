@@ -18,8 +18,7 @@ const About = () => {
             <Info />
 
             <p className="about__description">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
-              voluptates. Quisquam, voluptates. Quisquam, voluptates.
+               I have a strong work ethic and a desire to learn and grow as a developer. I am a fast learner and I am always looking for new opportunities to improve my skills.
             </p>
 
             <a download="" href={CV} className="button button--flex">

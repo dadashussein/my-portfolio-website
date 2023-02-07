@@ -2,7 +2,6 @@ import React from "react";
 import "./about.css";
 import AboutImg from "../../assets/mission.jpg";
 import Info from "./Info";
-import CV from "../../assets/myCV.pdf";
 
 
 const About = () => {
@@ -22,8 +21,8 @@ const About = () => {
                I have a strong work ethic and a desire to learn and grow as a developer. I am a fast learner and I am always looking for new opportunities to improve my skills.
             </p>
 
-            <a download="" href={CV} className="button button--flex">
-              Download CV
+            <a target="_blank"  href="https://www.canva.com/design/DAFZKqRCbDI/Dgd6qSgF3Ynq7Uy5UYhcBA/view?utm_content=DAFZKqRCbDI&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink" className="button button--flex">
+              Open CV
               <svg
                 class="button__icon"
                 xmlns="http://www.w3.org/2000/svg"

@@ -1,19 +1,27 @@
 /*=============== GOOGLE FONTS ===============*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Merienda&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Vibur&display=swap');
 
 /*=============== VARIABLES CSS ===============*/
 :root {
   --header-height: 3rem;
 
+  /* 
+  background-image: linear-gradient( 135deg, #43CBFF 10%, #9708CC 100%);
+  */
+
   /*========== Colors ==========*/
   /*Color mode HSL(hue, saturation, lightness)*/
   --hue: 0;
   --sat: 0%;
-  --title-color: hsl(var(--hue), var(--sat), 20%);
+  --background-color: rgb(131,58,180);
+  --background-gradient: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(89,29,253,1) 50%, rgba(252,176,69,1) 100%);
+  --title-color: #fff;
   --title-color-dark: hsl(var(--hue), var(--sat), 0%);
-  --text-color: hsl(var(--hue), var(--sat), 46%);
+  --text-color: #fff;
   --body-color: hsl(var(--hue), var(--sat), 98%);
-  --container-color: #fff;
+  --container-color: rgba(1, 1, 1, 0.2);
 
   /*========== Font and typography ==========*/
   --body-font: "Poppins", sans-serif;
@@ -83,7 +91,8 @@ textarea {
 }
 
 body {
-  background-color: var(--body-color);
+  background-color: var(--background-color);
+  background-image: var(--background-gradient);
   color: var(--text-color);
 }
 
@@ -120,13 +129,14 @@ img {
 
 .section__title {
   font-size: var(--h1-font-size);
-  color: var(--title-color);
+  color: #fff;
 }
 
 .section__subtitle {
   display: block;
   font-size: var(--small-font-size);
   margin-bottom: 4rem;
+  color: #fff;
 }
 
 .section__title,
@@ -149,15 +159,17 @@ img {
 /*=============== BUTTONS ===============*/
 .button {
   display: inline-block;
-  background-color: var(--title-color);
-  color: var(--container-color);
+  background-color: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(5px);
+  color: #fff;
   padding: 1.25rem 2rem;
   border-radius: 1rem;
   font-weight: var(--font-medium);
+  transition: all 0.3s;
 }
 
 .button:hover {
-  background-color: var(--title-color-dark);
+  background-color: rgba(0, 0, 0, 0.15);
 }
 
 .button__icon {

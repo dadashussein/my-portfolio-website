@@ -1,13 +1,14 @@
-.header{
+.header {
     width: 100%;
     position: fixed;
     top: 0;
     left: 0;
     z-index: var(--z-fixed);
-    background-color: var(--body-color);
+    background-color: rgba(0, 0, 0, 0.35);
+
 }
 
-.nav{
+.nav {
     height: calc(var(--header-height) + 1.5rem);
     display: flex;
     justify-content: space-between;
@@ -15,118 +16,202 @@
     column-gap: 1rem;
 }
 
-.nav__logo,
-.nav__toggle{
+/* logo neon animation */
+.logo b {
+    font: 500 5vh "Vibur";
+    color: rgb(255, 255, 255);
+    text-shadow: 0 -40px 80px, 0 0 2px, 0 0 1em #ff4444, 0 0 0.5em #6d04a5, 0 0 0.6em #e01818, 0 9px 3px #000;
+}
+
+.logo b span {
+    animation: blink linear infinite 2s;
+}
+
+.logo b span:nth-of-type(2) {
+    animation: blink linear infinite 3s;
+}
+
+@keyframes blink {
+    78% {
+        color: inherit;
+        text-shadow: inherit;
+    }
+
+    79% {
+        color: #333;
+    }
+
+    80% {
+
+        text-shadow: none;
+    }
+
+    81% {
+        color: inherit;
+        text-shadow: inherit;
+    }
+
+    82% {
+        color: #333;
+        text-shadow: none;
+    }
+
+    83% {
+        color: inherit;
+        text-shadow: inherit;
+    }
+
+    92% {
+        color: #333;
+        text-shadow: none;
+    }
+
+    92.5% {
+        color: inherit;
+        text-shadow: inherit;
+    }
+}
+
+
+
+.nav__toggle {
     font-size: 1.7rem;
-    color: var(--title-color);
+    color: #fff;
     font-weight: var(--font-medium);
 }
 
-.nav__list{
+.nav__list {
     display: flex;
     column-gap: 2rem;
 }
-.nav__link{
+
+.nav__link {
     display: flex;
     flex-direction: column;
     align-items: center;
     font-size: var(--small-font-size);
-    color: var(--title-color);
+    color: #fff;
     font-weight: var(--font-medium);
     transition: .3s;
 }
 
 .nav__icon,
 .nav__close,
-.nav__toggle{
+.nav__toggle {
     display: none;
 }
 
 /*=============== active link ===============*/
 .active-link,
-.nav__link:hover{
-    color: var(--title-color-dark);
+.nav__link:hover {
+    color: orange;
 }
 
 /* Change background header */
-.scroll-header{    
+.scroll-header {
     box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
 }
 
 /*=============== breakpoints ===============*/
 
 /* For medium devices */
+
+@media screen and (min-width: 769px) {
+    .header {
+        backdrop-filter: blur(5px);
+    }
+}
+
 @media screen and (max-width: 768px) {
     .header {
         top: initial;
         bottom: 0;
+        background-color: rgba(0, 0, 0, 0.55);
     }
+
     .nav {
         height: var(--header-height);
+        display: flex;
+        justify-content: flex-end;
     }
-    .nav__menu{
+
+    .nav__menu {
         position: fixed;
         bottom: -100%;
         left: 0;
         width: 100%;
-        background-color: var(--body-color);
+        background-color: rgba(0, 0, 0, 0.55);
+        backdrop-filter: blur(5px);
         padding: 2rem 1.5rem 4rem;
         box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
         border-radius: 1.5rem 1.5rem 0 0;
         transition: .3s;
     }
 
+    .logo {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 2rem;
+    }
+
+    .logo b {
+        font: 500 4.5vh "Vibur";
+    }
+
     /*show menu*/
-    .show-menu{
+    .show-menu {
         bottom: 0;
     }
 
-    .nav__list{
+    .nav__list {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-       gap: 2rem;
+        gap: 2rem;
     }
-.nav__icon{
-    font-size: 1.2rem;
-}
 
-.nav__close{
-    position: absolute;
-    right: 1.3rem;
-    bottom: .5rem;
-    font-size: 1.5rem;
-    color: var(--title-color);
-    font-weight: var(--font-medium);
-    cursor: pointer;
-}
+    .nav__icon {
+        font-size: 1.2rem;
+    }
 
-.nav__close:hover{
-    color: var(--title-color-dark);
-}
+    .nav__close {
+        position: absolute;
+        right: 1.3rem;
+        bottom: .5rem;
+        font-size: 1.5rem;
+        color: var(--title-color);
+        font-weight: var(--font-medium);
+        cursor: pointer;
+    }
 
-.nav__toggle{
-    font-size: 1.5rem;
-    color: var(--title-color);
-    font-weight: var(--font-medium);
-    cursor: pointer;
+    .nav__close:hover {
+        color: orange;
+    }
 
-}
+    .nav__toggle {
+        font-size: 1.5rem;
+        color: var(--title-color);
+        font-weight: var(--font-medium);
+        cursor: pointer;
+
+    }
 
     .nav__icon,
     .nav__close,
-    .nav__toggle{
+    .nav__toggle {
         display: block;
     }
-  }
+}
 
 /* For small devices */
-/* For small devices */
 @media screen and (max-width: 350px) {
-    .nav__menu{
+
+    .nav__menu {
         padding: 2rem 1rem 4rem;
     }
-    .nav__list{
+
+    .nav__list {
         column-gap: 0;
     }
-  }
-  
+}

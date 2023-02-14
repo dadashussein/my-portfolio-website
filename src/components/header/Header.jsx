@@ -20,9 +20,13 @@ const Header = () => {
   return (
     <header className="header">
       <nav className="nav container">
-        <a href="index.html" className="nav__logo">
-          huseynzada
-        </a>
+        <div className="logo">
+          <a href="index.html">
+            <b>
+              h<span>us</span>eyn<span>za</span>da
+            </b>
+          </a>
+        </div>
         <div className={Toggle ? "nav__menu show-menu" : "nav__menu"}>
           <ul className="nav__list grid">
             <li className="nav__item">
@@ -36,17 +40,7 @@ const Header = () => {
                 <i className="uil uil-estate nav__icon"></i>Home
               </a>
             </li>
-            <li className="nav__item">
-              <a
-                href="#about"
-                onClick={() => setActiveNav("#about")}
-                className={
-                  activeNav === "#about" ? "nav__link active-link" : "nav__link"
-                }
-              >
-                <i className="uil uil-user nav__icon"></i>About
-              </a>
-            </li>
+
             <li className="nav__item">
               <a
                 href="#skills"
@@ -60,19 +54,7 @@ const Header = () => {
                 <i className="uil uil-file-alt nav__icon"></i>Skills
               </a>
             </li>
-            <li className="nav__item">
-              <a
-                href="#portfolio"
-                onClick={() => setActiveNav("#portfolio")}
-                className={
-                  activeNav === "#portfolio"
-                    ? "nav__link active-link"
-                    : "nav__link"
-                }
-              >
-                <i className="uil uil-scenery nav__icon"></i>Portfolio
-              </a>
-            </li>
+
             <li className="nav__item">
               <a
                 href="#contact"

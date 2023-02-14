@@ -7,7 +7,7 @@
 
 .skills__content {
     background-color: var(--container-color);
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    border: 1px solid  var(--border-color);
     padding: 2rem 4rem;
     border-radius: 1.25rem;
    
@@ -19,6 +19,7 @@
     font-weight: var(--font-medium);
     text-align: center;
     margin-bottom: var(--mb-1-5);
+    color: #fff;
 }
 
 .skills__box {
@@ -38,18 +39,20 @@
     column-gap: 0.5rem;
     margin-top: 1rem;
     
+    
 }
 
 
 .skills .bx {
     font-size: 1.7rem;
-    color: var(--title-color);
+    color: #fff;
 }
 
 .skills__name {
     font-size: var(--normal-font-size);
     font-weight: var(--font-medium);
     line-height: 18px;
+    color: #fff;
 }
 
 .skills__level {

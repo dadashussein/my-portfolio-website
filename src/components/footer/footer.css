@@ -37,16 +37,16 @@
 }
 
 .footer__social-link{
-   background-color: var(--title-color);
-   color: var(--container-color);
-   font-size: 1.125rem;
-   padding: 0.4rem;
+   background-color: rgba(0, 0, 0, 0.2);
+   color: var(--title-color);
+   font-size: 1.4rem;
+   padding: 0.5rem;
    border-radius: 0.5rem;
    display: inline-flex;
 }
 
 .footer__social-link:hover{
-    background-color: var(--title-color-dark);
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
 .footer__copy{

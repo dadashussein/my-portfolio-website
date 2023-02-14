@@ -15,8 +15,9 @@
   /*Color mode HSL(hue, saturation, lightness)*/
   --hue: 0;
   --sat: 0%;
-  --background-color: rgb(131,58,180);
-  --background-gradient: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(89,29,253,1) 50%, rgba(252,176,69,1) 100%);
+  --background-color: rgb(131, 58, 180);
+  --background-gradient: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(89, 29, 253, 1) 50%, rgba(252, 176, 69, 1) 100%);
+  --mobile-background-gradient: linear-gradient(77deg, rgba(131, 58, 180, 1) 0%, rgba(89, 29, 253, 1) 50%, rgba(252, 176, 69, 1) 100%);
   --title-color: #fff;
   --title-color-dark: hsl(var(--hue), var(--sat), 0%);
   --text-color: #fff;
@@ -56,6 +57,15 @@
   --z-tooltip: 10;
   --z-fixed: 100;
   --z-modal: 1000;
+
+
+  /*=============== NEON ===============*/
+  --box-shadow-neon: 0 0 .5rem #fff,
+    0 0 .3rem #fff,
+    0 0 3rem #6513fe,
+    0 0 0.9rem #6513fe,
+    0 0 1.8rem #6513fe,
+    inset 0 0 1.7rem #6513fe;
 }
 
 /* Responsive typography */
@@ -165,11 +175,17 @@ img {
   padding: 1.25rem 2rem;
   border-radius: 1rem;
   font-weight: var(--font-medium);
-  transition: all 0.3s;
+  transition: all 0.2s;
+  box-shadow:
+    -10px 0 50px #f0f,
+    10px 0 80px #0ff;
 }
 
 .button:hover {
-  background-color: rgba(0, 0, 0, 0.15);
+  background-color: rgba(0, 0, 0, 0.1);
+  box-shadow:
+    -10px 0 70px rgb(255, 0, 255),
+    10px 0 50px #0ff;
 }
 
 .button__icon {
@@ -203,6 +219,7 @@ img {
 @media screen and (max-width: 768px) {
   body {
     margin: 0 0 var(--header-height) 0;
+    background-image: var(--mobile-background-gradient);
   }
 
   .section {

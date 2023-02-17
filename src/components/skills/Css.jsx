@@ -11,7 +11,7 @@ const Frontend = () => {
             <h3 className="skills__name">Bootstrap</h3>
           </div>
           <div className="skills__data">
-            <i class="bx bxl-sass"></i>
+            <i className="bx bxl-sass"></i>
             <div>
               <h3 className="skills__name">Sass</h3>
             </div>
@@ -19,20 +19,20 @@ const Frontend = () => {
         </div>
         <div className="skills__group">
           <div className="skills__data">
-            <i class="bx bxl-tailwind-css"></i>
+            <i className="bx bxl-tailwind-css"></i>
             <h3 className="skills__name">Tailwind</h3>
           </div>
         </div>
         <div className="skills__group">
           <div className="skills__data">
-            <i class="bx bxl-css3"></i>
+            <i className="bx bxl-css3"></i>
             <h3 className="skills__name">Material UI</h3>
           </div>
         </div>
         <div className="skills__group">
           <div className="skills__data">
-            <i class="bx bxl-css3"></i>
-            <h3 className="skills__name">Styled</h3>
+          <i className='bx bxl-less'></i>
+            <h3 className="skills__name">Less</h3>
           </div>
         </div>
       </div>

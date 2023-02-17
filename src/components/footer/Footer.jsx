@@ -9,22 +9,25 @@ const Footer = () => {
 
         <div className="footer__social">
           <a
-            href="https://www.facebook.com/"
+            href="https://codepen.io/dadashussein"
             className="footer__social-link"
+            rel="noreferrer"
             target="_blank"
           >
-            <i className="bx bxl-facebook"></i>
+            <i className="bx bxl-codepen"></i>
           </a>
           <a
             href="https://instagram.com/"
             className="footer__social-link"
+            rel="noreferrer"
             target="_blank"
           >
             <i className="bx bxl-instagram"></i>
           </a>
           <a
-            href="https://twitter.com/"
+            href="https://twitter.com/dadashussein"
             className="footer__social-link"
+            rel="noreferrer"
             target="_blank"
           >
             <i className="bx bxl-twitter"></i>

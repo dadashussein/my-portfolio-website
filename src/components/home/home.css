@@ -61,7 +61,9 @@
     padding-bottom: 1rem;
     color: #fff;
 }
-
+.button{
+    margin: .75rem;
+}
 .home__img {
     background: url(../../assets/profile.jpeg);
     background-repeat: no-repeat;

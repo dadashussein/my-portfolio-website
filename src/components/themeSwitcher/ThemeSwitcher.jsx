@@ -21,14 +21,14 @@ const ThemeSwitcher = () => {
     <div className="toggle">
       <input
         type="checkbox"
-        class="checkbox"
+        className="checkbox"
         id="checkbox"
         onClick={toogleTheme}
       />
-      <label for="checkbox" class="label">
-        <i class="uil uil-moon"></i>
-        <i class="uil uil-sun"></i>
-        <div class="ball" />
+      <label htmlFor="checkbox" className="label">
+        <i className="uil uil-moon"></i>
+        <i className="uil uil-sun"></i>
+        <div className="ball" />
       </label>
     </div>
   );

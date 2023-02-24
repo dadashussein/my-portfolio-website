@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import ThemeSwitcher from "../themeSwitcher/ThemeSwitcher";
 import "./header.css";
 const Header = () => {
   window.addEventListener("scroll", function () {
@@ -89,6 +90,10 @@ const Header = () => {
             onClick={() => showMenu(!Toggle)}
           ></i>
         </div>
+        <div className="mode">
+          <ThemeSwitcher />
+        </div>
+
         <div className="nav__toggle" onClick={() => showMenu(!Toggle)}>
           <i className="uil uil-apps"></i>
         </div>

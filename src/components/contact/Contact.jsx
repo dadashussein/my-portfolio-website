@@ -1,4 +1,3 @@
-import React from "react";
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import "./contact.css";
@@ -102,7 +101,7 @@ const Contact = () => {
                 placeholder="Write me your project"
               ></textarea>
             </div>
-            <button className="button button--flex">
+            <button className="button button--flex" id="button">
               Send Message
               <svg
                 class="button__icon"

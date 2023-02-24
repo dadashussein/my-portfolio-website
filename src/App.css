@@ -7,12 +7,8 @@
 :root {
   --header-height: 3rem;
 
-  /* 
-  background-image: linear-gradient( 135deg, #43CBFF 10%, #9708CC 100%);
-  */
-
   /*========== Colors ==========*/
-  /*Color mode HSL(hue, saturation, lightness)*/
+  /*Color mode HSL(hue, saturation, lightness) light*/
   --hue: 0;
   --sat: 0%;
   --background-color: rgb(131, 58, 180);
@@ -23,6 +19,8 @@
   --text-color: #fff;
   --body-color: hsl(var(--hue), var(--sat), 98%);
   --container-color: rgba(1, 1, 1, 0.2);
+  --text-shadow: 0 -40px 80px, 0 0 2px, 0 0 1em #ff4444, 0 0 0.5em #6d04a5, 0 0 0.6em #e01818, 0 9px 3px #000;
+
 
   /*========== Font and typography ==========*/
   --body-font: "Poppins", sans-serif;
@@ -36,6 +34,7 @@
   --small-font-size: 0.875rem;
   --smaller-font-size: 0.813rem;
   --tiny-font-size: 0.625rem;
+
 
   /*========== Font weight ==========*/
   --font-normal: 400;
@@ -66,6 +65,76 @@
     0 0 0.9rem #6513fe,
     0 0 1.8rem #6513fe,
     inset 0 0 1.7rem #6513fe;
+
+  --box-shadow-button:
+    -10px 0 50px #f0f,
+    10px 0 80px #0ff;
+}
+
+/*=============== DARK MODE ===============*/
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: hsl(var(--hue), var(--sat), 0%);
+    --background-gradient: linear-gradient(to right, #000000, #434343);
+    --mobile-background-gradient: linear-gradient(to right, #000000, #434343);
+    --title-color: hsl(var(--hue), var(--sat), 98%);
+    --text-color: hsl(var(--hue), var(--sat), 98%);
+    --body-color: hsl(var(--hue), var(--sat), 10%);
+    --container-color: rgba(255, 255, 255, 0.2);
+    --box-shadow-button: 0 0 1.5rem #fff;
+    --text-shadow: 0 -40px 80px rgba(0, 0, 0, 0.5), 0 0 2px rgba(255, 68, 68, 0.8), 0 0 1em rgba(109, 4, 165, 0.8), 0 0 0.5em rgba(224, 24, 24, 0.8), 0 0 0.6em rgba(224, 24, 24, 0.8), 0 9px 3px rgba(0, 0, 0, 0.5);
+  }
+}
+
+@media(prefers-color-scheme: light) {
+  :root {
+    --hue: 0;
+    --sat: 0%;
+    --background-color: rgb(131, 58, 180);
+    --background-gradient: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(89, 29, 253, 1) 50%, rgba(252, 176, 69, 1) 100%);
+    --mobile-background-gradient: linear-gradient(77deg, rgba(131, 58, 180, 1) 0%, rgba(89, 29, 253, 1) 50%, rgba(252, 176, 69, 1) 100%);
+    --title-color: #fff;
+    --title-color-dark: hsl(var(--hue), var(--sat), 0%);
+    --text-color: #fff;
+    --body-color: hsl(var(--hue), var(--sat), 98%);
+    --container-color: rgba(1, 1, 1, 0.2);
+    --box-shadow-button:
+      -10px 0 50px #f0f,
+      10px 0 80px #0ff;
+    --text-shadow: 0 -40px 80px, 0 0 2px, 0 0 1em #ff4444, 0 0 0.5em #6d04a5, 0 0 0.6em #e01818, 0 9px 3px #000;
+
+  }
+}
+
+:root[color-scheme="dark"] {
+  --background-color: hsl(var(--hue), var(--sat), 0%);
+  --background-gradient: linear-gradient(to right, #000000, #434343);
+  --mobile-background-gradient: linear-gradient(to right, #000000, #434343);
+  --title-color: hsl(var(--hue), var(--sat), 98%);
+  --text-color: hsl(var(--hue), var(--sat), 98%);
+  --body-color: hsl(var(--hue), var(--sat), 10%);
+  --container-color: rgba(255, 255, 255, 0.2);
+  --box-shadow-button: 0 0 1.5rem #fff;
+  --text-shadow: 0 -40px 80px rgba(0, 0, 0, 0.5), 0 0 2px rgba(255, 68, 68, 0.8), 0 0 1em rgba(109, 4, 165, 0.8), 0 0 0.5em rgba(224, 24, 24, 0.8), 0 0 0.6em rgba(224, 24, 24, 0.8), 0 9px 3px rgba(0, 0, 0, 0.5);
+
+}
+
+:root[color-scheme="light"] {
+  --hue: 0;
+  --sat: 0%;
+  --background-color: rgb(131, 58, 180);
+  --background-gradient: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(89, 29, 253, 1) 50%, rgba(252, 176, 69, 1) 100%);
+  --mobile-background-gradient: linear-gradient(77deg, rgba(131, 58, 180, 1) 0%, rgba(89, 29, 253, 1) 50%, rgba(252, 176, 69, 1) 100%);
+  --title-color: #fff;
+  --title-color-dark: hsl(var(--hue), var(--sat), 0%);
+  --text-color: #fff;
+  --body-color: hsl(var(--hue), var(--sat), 98%);
+  --container-color: rgba(1, 1, 1, 0.2);
+  --box-shadow-button:
+    -10px 0 50px #f0f,
+    10px 0 80px #0ff;
+  --text-shadow: 0 -40px 80px, 0 0 2px, 0 0 1em #ff4444, 0 0 0.5em #6d04a5, 0 0 0.6em #e01818, 0 9px 3px #000;
+
 }
 
 /* Responsive typography */
@@ -90,6 +159,7 @@
 
 html {
   scroll-behavior: smooth;
+
 }
 
 body,
@@ -139,14 +209,14 @@ img {
 
 .section__title {
   font-size: var(--h1-font-size);
-  color: #fff;
+  color: var(--title-color);
 }
 
 .section__subtitle {
   display: block;
   font-size: var(--small-font-size);
   margin-bottom: 4rem;
-  color: #fff;
+  color: var(--subtitle-color);
 }
 
 .section__title,
@@ -176,9 +246,8 @@ img {
   border-radius: 1rem;
   font-weight: var(--font-medium);
   transition: all 0.2s;
-  box-shadow:
-    -10px 0 50px #f0f,
-    10px 0 80px #0ff;
+  box-shadow: var(--box-shadow-button);
+
 }
 
 .button:hover {

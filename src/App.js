@@ -6,12 +6,13 @@ import Home from "./components/home/Home";
 import Portfolio from "./components/portfolio/Portfolio";
 import ScrollUp from "./components/scrollup/ScrollUp";
 import Skills from "./components/skills/Skills";
-
+import ThemeSwitcher from "./components/themeSwitcher/ThemeSwitcher";
 function App() {
   return (
     <>
       <Header />
       <main className="main">
+        <ThemeSwitcher />
         <Home />
         <Skills />
         <Portfolio />

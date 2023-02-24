@@ -47,7 +47,6 @@ const Portfolio = () => {
               return "bx bx-check-square";
             }
           };
-
           return (
             <div className="portfolio__card" key={idx}>
               <p className="card-name">

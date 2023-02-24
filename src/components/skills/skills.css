@@ -20,7 +20,7 @@
     font-weight: var(--font-medium);
     text-align: center;
     margin-bottom: var(--mb-1-5);
-    color: #fff;
+    color: var(--title-color);
 }
 
 .skills__box {

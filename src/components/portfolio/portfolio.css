@@ -29,8 +29,16 @@
     justify-content: center;
     align-items: center;
     transition: all 0.3s ease;
+
 }
 
+.portfolio__card img {
+    margin: 0.75rem 0;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 0.5rem;
+    width: 270px;
+    height: 300px;
+}
 
 .card-name {
     text-align: center;
@@ -76,6 +84,11 @@
     transition: all 0.3s ease;
 }
 
+.card-visit {
+    display: flex;
+    gap: 2rem;
+}
+
 .card-button:hover {
     background-color: rgba(0, 0, 0, 0.1);
     box-shadow:
@@ -98,8 +111,6 @@
         margin: 1rem;
     }
 
-  
-
     .portfolio__card {
         min-width: 18rem;
     }
@@ -109,7 +120,16 @@
     }
 
     .card-description a {
-        font-size: 1rem;
-        padding: 0.3rem 0.5rem;
+        font-size: .9rem;
+    }
+
+    .card-visit {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .card-button {
+        padding: 0.2rem .75rem;
+        margin-top: .5rem;
     }
 }

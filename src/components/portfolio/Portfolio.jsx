@@ -1,8 +1,11 @@
 import React from "react";
 import "./portfolio.css";
 import { useState, useEffect } from "react";
+import Movie from "../../assets/movie.png";
+import Weather from "../../assets/weather.png";
 const Portfolio = () => {
   const [portfolio, setPortfolio] = useState([]);
+  console.log(portfolio);
   const fetchPortfolio = async () => {
     const response = await fetch(
       "https://api.github.com/users/dadashussein/repos"
@@ -10,15 +13,24 @@ const Portfolio = () => {
     const data = await response.json();
     const filtered = data.filter(
       (project) =>
-        project.name === "movie-app" ||
-        project.name === "weather-api" ||
-        project.name === "todo-app"
+        project.name === "movie-app" || project.name === "weather-api"
     );
     setPortfolio(filtered);
   };
   useEffect(() => {
     fetchPortfolio();
   }, []);
+
+  const imageChanger = (name) => {
+    switch (name) {
+      case "Movie App":
+        return Movie;
+      case "Weather App":
+        return Weather;
+      default:
+        return null;
+    }
+  };
 
   return (
     <section className="portfolio section" id="portfolio">
@@ -32,9 +44,6 @@ const Portfolio = () => {
           if (project.name === "weather-api") {
             project.name = "Weather App";
           }
-          if (project.name === "todo-app") {
-            project.name = "Todo App";
-          }
 
           const changeIcon = (project) => {
             if (project.name === "Movie App") {
@@ -43,9 +52,6 @@ const Portfolio = () => {
             if (project.name === "Weather App") {
               return "bx bx-cloud-drizzle";
             }
-            if (project.name === "Todo App") {
-              return "bx bx-check-square";
-            }
           };
           return (
             <div className="portfolio__card" key={idx}>
@@ -53,13 +59,21 @@ const Portfolio = () => {
                 {project.name}
                 <i className={changeIcon(project)}></i>
               </p>
+              <img src={imageChanger(project.name)} alt="" />
               <div className="card-description">
                 <p>{project.description}</p>
-                <button className="card-button">
-                  <a href={project.homepage} rel="noreferrer" target="_blank">
-                    Visit
-                  </a>
-                </button>
+                <div className="card-visit">
+                  <button className="card-button">
+                    <a href={project.homepage} rel="noreferrer" target="_blank">
+                      Live
+                    </a>
+                  </button>
+                  <button className="card-button">
+                    <a href={project.html_url} rel="noreferrer" target="_blank">
+                      Source code
+                    </a>
+                  </button>
+                </div>
               </div>
             </div>
           );

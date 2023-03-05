@@ -76,6 +76,7 @@
   :root {
     --background-color: hsl(var(--hue), var(--sat), 0%);
     --background-gradient: linear-gradient(to right, #000000, #434343);
+    --header-background-color: rgba(122, 119, 119, 0.5);
     --mobile-background-gradient: linear-gradient(to right, #000000, #434343);
     --title-color: hsl(var(--hue), var(--sat), 98%);
     --text-color: hsl(var(--hue), var(--sat), 98%);
@@ -93,6 +94,7 @@
     --background-color: rgb(131, 58, 180);
     --background-gradient: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(89, 29, 253, 1) 50%, rgba(252, 176, 69, 1) 100%);
     --mobile-background-gradient: linear-gradient(77deg, rgba(131, 58, 180, 1) 0%, rgba(89, 29, 253, 1) 50%, rgba(252, 176, 69, 1) 100%);
+    --header-background-color: rgba(0, 0, 0, 0.5);
     --title-color: #fff;
     --title-color-dark: hsl(var(--hue), var(--sat), 0%);
     --text-color: #fff;
@@ -109,6 +111,7 @@
 :root[color-scheme="dark"] {
   --background-color: hsl(var(--hue), var(--sat), 0%);
   --background-gradient: linear-gradient(to right, #000000, #434343);
+  --header-background-color: rgba(122, 119, 119, 0.5);
   --mobile-background-gradient: linear-gradient(to right, #000000, #434343);
   --title-color: hsl(var(--hue), var(--sat), 98%);
   --text-color: hsl(var(--hue), var(--sat), 98%);
@@ -123,6 +126,7 @@
   --hue: 0;
   --sat: 0%;
   --background-color: rgb(131, 58, 180);
+  --header-background-color: rgba(0, 0, 0, 0.5);
   --background-gradient: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(89, 29, 253, 1) 50%, rgba(252, 176, 69, 1) 100%);
   --mobile-background-gradient: linear-gradient(77deg, rgba(131, 58, 180, 1) 0%, rgba(89, 29, 253, 1) 50%, rgba(252, 176, 69, 1) 100%);
   --title-color: #fff;
